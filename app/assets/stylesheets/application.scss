@@ -16,3 +16,11 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+    font-family: 'Lato', Helvetica-neue, Helvetica, Arial, sans-serif;
+    background-color: #F9FBFB;
+}
+h1, h2, h3, h4, h5, h6{
+    // font-family: 'Abril fatface', cursive;
+}
