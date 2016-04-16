@@ -22,7 +22,6 @@
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <%= flash[:alert] %>
           </div>
-          </div>
       <% elsif flash.now[:alert] %>
           <div class="alert alert-warning">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -41,7 +40,7 @@
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
     </div>
-  
+    
   <%= yield %>
   </div>
   

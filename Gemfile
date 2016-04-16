@@ -11,6 +11,7 @@ group :production do
 end
 group :development do
   gem 'sqlite3'
+  gem 'shoulda'
 end
 
 gem 'sass-rails', '~> 5.0'
