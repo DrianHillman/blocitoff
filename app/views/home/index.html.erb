@@ -6,14 +6,14 @@
 <%= render partial: 'form', locals: { item: @item } %>
 
 <div class="col-md-12 item-list">
-  <% @items.each do |item| %>
+  <% @user.items.each do |item| %>
     <div class="media">
       <div class="media-body">
         <h4 class="media-heading">
           <%= item.name %>
         </h4>
       </div>
-    </div>
+  </div>
   <% end %>
 </div>
 <br><br>
