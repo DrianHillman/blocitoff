@@ -1,0 +1,12 @@
+<%= form_for [current_user, Item.new], remote: true do |f| %>
+  <div class="col-md-12">
+    <div class="media">
+        <div class="media-body">
+          <div class="form-group input-group">
+            <%= f.text_field :name, class: 'form-control new-item', placeholder: "Enter your next task" %>
+            <span class="input-group-btn"><%= f.submit "Add Task", class: 'btn btn-success' %></span>
+          </div>
+        </div>
+      </div>  
+  </div>
+<% end %>

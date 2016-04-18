@@ -2,18 +2,11 @@
 <div class="jumbotron">
   <h1>Blocitoff To-Do List</h1>
 </div>
+<div class='new-item'>
+  <%= render partial: 'items/form' %>
+</div>
 
-<%= render partial: 'form', locals: { item: @item } %>
-
-<div class="col-md-12 item-list">
-  <% @user.items.each do |item| %>
-    <div class="media">
-      <div class="media-body">
-        <h4 class="media-heading">
-          <%= item.name %>
-        </h4>
-      </div>
-  </div>
-  <% end %>
+<div class="col-md-12 js-items">
+  <%= render @user.items %>
 </div>
 <br><br>

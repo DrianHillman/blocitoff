@@ -1,24 +1,26 @@
 require 'random_data'
 
 # Create Users
-5.times do
+3.times do
   User.create!(
     email:    RandomData.random_email,
     password: RandomData.random_sentence
   )
 end
 
-user = User.first
-user.update_attributes!(
+user = User.create!(
   email: 'dhillman24@gmail.com',
   password: 'blocitoff'
   )
+demoUser = User.create!(
+  email: 'demo@blocitoff.com',
+  password: 'blocitoff')
   
 users = User.all
  
 # Create Items
 50.times do
-  item = Item.create!(
+  Item.create!(
     user:   users.sample,
     name:   RandomData.random_sentence,
   )

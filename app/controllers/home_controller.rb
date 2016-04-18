@@ -3,10 +3,7 @@ class HomeController < ApplicationController
   
   def index
     @user = current_user
+    @new_item = @user.items.new
   end
-  
-  private
-    def item_params
-      params.require(:item).permit(:name)
-    end
+
 end

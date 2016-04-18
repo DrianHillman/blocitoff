@@ -1,13 +1,20 @@
 class ItemsController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def create
-    @user = User.find(params[:user_id])
-    @item = @user.items.build(item_params)
+    @item = Item.new(item_params)
     @item.user = current_user
+    @new_item = Item.new
 
-    unless @item.save
+    if @item.save
+     flash[:notice] = "Item Saved! You have 7 days: Ready Set Go!"
+    else
       flash.now[:alert] = "There was an error saving the post. Please try again."
-      render :new
+    end
+    
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
   
