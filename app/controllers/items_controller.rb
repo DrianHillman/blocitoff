@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
     @new_item = Item.new
 
     if @item.save
-     flash.now[:notice] = "Item Saved! You have 7 days: Ready Set Go!"
+     flash[:notice] = "Item Saved! You have 7 days: Ready Set Go!"
     else
       flash.now[:alert] = "There was an error saving the post. Please try again."
     end
