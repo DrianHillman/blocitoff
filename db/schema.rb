@@ -35,6 +35,11 @@ ActiveRecord::Schema.define(version: 20160413151427) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string :authentication_token
+    t.string   :confirmation_token
+    t.datetime :confirmed_at
+    t.string   :unconfirmed_email
+    t.datetime :confirmation_sent_at
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
