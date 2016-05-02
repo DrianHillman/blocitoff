@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   
   def destroy
     @item = Item.find(params[:id])
+    @item.complete = true
 
     if @item.destroy
       flash.now[:notice] = "Item marked complete!"

@@ -10,5 +10,4 @@ Rails.application.routes.draw do
     resources :items, only: [:create, :destroy]
   end
   
-  post '/mark_complete' => 'items#mark_complete', as: :mark_complete
 end
