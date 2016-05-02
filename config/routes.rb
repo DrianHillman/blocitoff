@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'home#index'
   
   resources :users do
-    resources :items, only: [:create]
+    resources :items, only: [:create, :destroy]
   end
+  
+  post '/mark_complete' => 'items#mark_complete', as: :mark_complete
 end

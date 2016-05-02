@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   
   def index
     @user = current_user
-    @new_item = @user.items.new
   end
 
 end

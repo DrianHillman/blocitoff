@@ -1,7 +1,8 @@
-<div class="media">
+<div id="item-<%= item.id %>" class="media">
   <div class="media-body">
     <h4 class="media-heading">
-      <%= item.name %>
+      <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+      <%= item.name %><!-- <small>| Time Remaining:</small> -->
     </h4>
   </div>
 </div>

@@ -11,3 +11,24 @@ input.form-control{
 .js-items{
   margin-bottom: 50px;
 }
+
+a.glyphicon{
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px dashed #cccccc;
+  text-decoration: none;
+  color: #cccccc;
+}
+
+a.glyphicon:hover, a.glyphicon:visited, a.glyphicon:active, a.glyphicon:link {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+a.glyphicon:hover{
+  color: #41D88C;
+}
+
+.input-group-btn .btn-success{
+  // background-color: #;
+}

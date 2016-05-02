@@ -10,11 +10,14 @@ end
 
 user = User.create!(
   email: 'dhillman24@gmail.com',
-  password: 'blocitoff'
+  password: 'blocitoff',
+  confirmed_at: "1/1/2016"
   )
 demoUser = User.create!(
   email: 'demo@blocitoff.com',
-  password: 'blocitoff')
+  password: 'blocitoff',
+  confirmed_at: "1/1/2016"
+  )
   
 users = User.all
  

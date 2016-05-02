@@ -7,10 +7,10 @@ class ItemsController < ApplicationController
     @new_item = Item.new
 
     if @item.save
-     flash[:notice] = "Item Saved! You have 7 days: Ready Set Go!"
+     flash[:notice] = "Item Saved!"
     else
-      flash.now[:alert] = "There was an error saving the post. Please try again."
-    end
+      flash[:alert] = "There was an error saving the post. Please try again."
+    end 
     
     respond_to do |format|
       format.html
@@ -18,6 +18,20 @@ class ItemsController < ApplicationController
     end
   end
   
+  def destroy
+    @item = Item.find(params[:id])
+
+    if @item.destroy
+      flash.now[:notice] = "Item marked complete!"
+    else
+      flash.now[:alert] = "Item could not be marked complete. Try again."
+    end
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
   
   private
     def item_params
