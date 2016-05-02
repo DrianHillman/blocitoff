@@ -2,7 +2,7 @@
   <div class="media-body">
     <h4 class="media-heading">
       <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-      <%= item.name %><!-- <small>| Time Remaining:</small> -->
+      <%= item.name %> | <small>Created <%= distance_of_time_in_words(Time.now, item.created_at) %> ago</small>
     </h4>
   </div>
 </div>
